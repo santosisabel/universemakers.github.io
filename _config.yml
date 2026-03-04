@@ -1,0 +1,8 @@
+title: Universe Makers
+description: A static webpage for the Universe Makers exhibit at the Royal Society Summer Science Exhibition 2026.
+baseurl: ""
+url: "https://universemakers.github.io"
+
+# Build settings
+theme: null
+plugins: []

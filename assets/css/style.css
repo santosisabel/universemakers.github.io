@@ -1,0 +1,65 @@
+/* Universe Makers – base styles */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background-color: #0a0a1a;
+  color: #e8e8f0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: #10103a;
+  padding: 1.5rem 2rem;
+  border-bottom: 2px solid #3a3a8a;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  letter-spacing: 0.05em;
+  color: #c8b8ff;
+}
+
+header p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #a0a0c0;
+}
+
+main {
+  flex: 1;
+  max-width: 900px;
+  width: 100%;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+main h2 {
+  font-size: 1.75rem;
+  color: #c8b8ff;
+  margin-bottom: 1rem;
+}
+
+main p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #c0c0d8;
+}
+
+footer {
+  background-color: #10103a;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.85rem;
+  color: #6060a0;
+  border-top: 1px solid #3a3a8a;
+}
