@@ -2282,8 +2282,8 @@ input[type="radio"] + label:before {
 }
 
 .partner-logos .partner-logo-imperial {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
 }
 
 @media screen and (max-width: 736px) {
