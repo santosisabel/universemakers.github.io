@@ -4023,6 +4023,21 @@ body.is-preload #banner:after {
   color: inherit;
 }
 
+#main > header.credits-banner {
+  background-image:
+    -moz-linear-gradient(top, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55)),
+    url("../../images/credits_banner_mcalpine.webp");
+  background-image:
+    -webkit-linear-gradient(top, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55)),
+    url("../../images/credits_banner_mcalpine.webp");
+  background-image:
+    -ms-linear-gradient(top, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55)),
+    url("../../images/credits_banner_mcalpine.webp");
+  background-image:
+    linear-gradient(top, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55)),
+    url("../../images/credits_banner_mcalpine.webp");
+}
+
 @media screen and (max-width: 1680px) {
   #main > header {
     padding: 10em 0 8em 0;
