@@ -4053,6 +4053,44 @@ body.is-preload #banner:after {
     url("../../images/credits_banner_mcalpine.webp");
 }
 
+#main > header.under-construction-banner {
+  position: relative;
+  padding: 0;
+  background: none;
+  overflow: hidden;
+}
+
+#main > header.under-construction-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.55));
+  z-index: 1;
+}
+
+#main > header.under-construction-banner .under-construction-banner-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+#main > header.under-construction-banner .under-construction-banner-content {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+#main > header.under-construction-banner .under-construction-banner-content h2,
+#main > header.under-construction-banner .under-construction-banner-content p {
+  position: relative;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
 @media screen and (max-width: 1680px) {
   #main > header {
     padding: 10em 0 8em 0;
