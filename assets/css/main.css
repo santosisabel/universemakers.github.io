@@ -3737,7 +3737,11 @@ body.is-menu-visible #menu {
   overflow: hidden;
   position: relative;
   text-align: center;
-  background-image: url("../../images/millenium_cosmic_web_springel.webp");
+  background-image: url("../../images/millenium_cosmic_web_springel.png");
+  background-image: image-set(
+    url("../../images/millenium_cosmic_web_springel.webp") type("image/webp"),
+    url("../../images/millenium_cosmic_web_springel.png") type("image/png")
+  );
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -4239,16 +4243,22 @@ body.is-mobile #main > header {
 body.landing #page-wrapper {
   background-image:
     -moz-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../../images/banner.webp");
+    url("../../images/banner.jpg");
   background-image:
     -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../../images/banner.webp");
+    url("../../images/banner.jpg");
   background-image:
     -ms-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../../images/banner.webp");
+    url("../../images/banner.jpg");
   background-image:
     linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../../images/banner.webp");
+    url("../../images/banner.jpg");
+  background-image:
+    linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    image-set(
+      url("../../images/banner.webp") type("image/webp"),
+      url("../../images/banner.jpg") type("image/jpeg")
+    );
   background-attachment: fixed;
   background-position: center center;
   background-repeat: no-repeat;
@@ -4268,16 +4278,22 @@ body.is-mobile.landing #banner,
 body.is-mobile.landing .wrapper.style4 {
   background-image:
     -moz-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../../images/banner.webp");
+    url("../../images/banner.jpg");
   background-image:
     -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../../images/banner.webp");
+    url("../../images/banner.jpg");
   background-image:
     -ms-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../../images/banner.webp");
+    url("../../images/banner.jpg");
   background-image:
     linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../../images/banner.webp");
+    url("../../images/banner.jpg");
+  background-image:
+    linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    image-set(
+      url("../../images/banner.webp") type("image/webp"),
+      url("../../images/banner.jpg") type("image/jpeg")
+    );
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
