@@ -110,28 +110,51 @@
           <section class="spotlight">
             <div class="content">
               <h3>How do we study it?</h3>
-              <p>
-                Unlike many other fields, we can't create the Cosmic Web in a
-                laboratory, poke it with a stick and see how it reacts. Not only
-                are the spatial scales beyond human comprehension; the
-                timescales over which the Cosmic Web evolves are distinctly
-                non-human too. Instead, we confine the uncountable light-years
-                and billions of years encompassed by the Universe's evolution
-                into computer codes where we can play God with fundamental
-                physics and watch the Universe evolve before our eyes. However,
-                with only these virtual universes to study, we can't say for
-                certain which version of our physical laws and which ingredients
-                are correct. To truly lock down the physics at the root of
-                everything, we need to compare our simulations with real
-                observations from telescopes probing the Universe across the
-                electromagnetic spectrum, from radio waves to gamma rays.
-              </p>
+              <div class="lss-image-comparison">
+                <div class="lss-image-copy">
+                  <p>
+                    Unlike many other fields, we can't create the Cosmic Web in a
+                    laboratory, poke it with a stick and see how it reacts. Not only
+                    are the spatial scales beyond human comprehension; the
+                    timescales over which the Cosmic Web evolves are distinctly
+                    non-human too. Instead, we confine the uncountable light-years
+                    and billions of years encompassed by the Universe's evolution
+                    into computer codes where we can play God with fundamental
+                    physics and watch the Universe evolve before our eyes. However,
+                    with only these virtual universes to study, we can't say for
+                    certain which version of our physical laws and which ingredients
+                    are correct. To truly lock down the physics at the root of
+                    everything, we need to compare our simulations with real
+                    observations from telescopes probing the Universe across the
+                    electromagnetic spectrum, from radio waves to gamma rays.
+                  </p>
+                </div>
+                <div class="lss-image-panel lss-cosma-image">
+                  <a class="lss-lightbox-trigger" href="images/cosma.webp">
+                    <img
+                      src="images/cosma.webp"
+                      alt="The COSMA supercomputer at Durham University."
+                    />
+                  </a>
+                  <p class="image-caption">
+                    COSMA is Durham University's memory-intensive DiRAC
+                    supercomputer for cosmology, astrophysics, and particle
+                    physics research. Credit:
+                    <a href="https://www.durham.ac.uk/departments/academic/physics/cosma/">Durham University</a>.
+                  </p>
+                </div>
+              </div>
               <div class="lss-image-comparison">
                 <div class="lss-image-panel">
-                  <img
-                    src="images/flamingo_2p8gpc_simulation.webp"
-                    alt="A FLAMINGO simulation visualisation showing the cosmic web and zoom-ins on a massive halo."
-                  />
+                  <a
+                    class="lss-lightbox-trigger"
+                    href="images/flamingo_2p8gpc_simulation.webp"
+                  >
+                    <img
+                      src="images/flamingo_2p8gpc_simulation.webp"
+                      alt="A FLAMINGO simulation visualisation showing the cosmic web and zoom-ins on a massive halo."
+                    />
+                  </a>
                   <p class="image-caption">
                     FLAMINGO simulation visualisation from Schaye et al. 2023.
                     Credit:
@@ -178,10 +201,15 @@
                   </p>
                 </div>
                 <div class="lss-image-panel">
-                  <img
-                    src="images/lss_redshift_survey.webp"
-                    alt="A redshift survey map showing galaxies tracing the cosmic web."
-                  />
+                  <a
+                    class="lss-lightbox-trigger"
+                    href="images/lss_redshift_survey.webp"
+                  >
+                    <img
+                      src="images/lss_redshift_survey.webp"
+                      alt="A redshift survey map showing galaxies tracing the cosmic web."
+                    />
+                  </a>
                   <p class="image-caption">
                     Galaxy map from the Sloan Digital Sky Survey. Credit:
                     <a href="https://www.sdss4.org/science/">SDSS</a>.
@@ -250,6 +278,13 @@
       </footer>
     </div>
 
+    <div class="lss-lightbox" id="lss-lightbox" aria-hidden="true">
+      <button class="lss-lightbox-close" type="button" aria-label="Close image">
+        &times;
+      </button>
+      <img src="" alt="" />
+    </div>
+
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.scrollex.min.js"></script>
     <script src="assets/js/jquery.scrolly.min.js"></script>
@@ -257,5 +292,37 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+      (function () {
+        var lightbox = document.getElementById("lss-lightbox");
+        var lightboxImage = lightbox.querySelector("img");
+        var closeButton = lightbox.querySelector("button");
+
+        function closeLightbox() {
+          lightbox.setAttribute("aria-hidden", "true");
+          lightboxImage.setAttribute("src", "");
+          lightboxImage.setAttribute("alt", "");
+        }
+
+        document.querySelectorAll(".lss-lightbox-trigger").forEach(function (link) {
+          link.addEventListener("click", function (event) {
+            var image = link.querySelector("img");
+
+            event.preventDefault();
+            lightboxImage.setAttribute("src", link.getAttribute("href"));
+            lightboxImage.setAttribute("alt", image ? image.getAttribute("alt") : "");
+            lightbox.setAttribute("aria-hidden", "false");
+          });
+        });
+
+        closeButton.addEventListener("click", closeLightbox);
+        lightbox.addEventListener("click", function (event) {
+          if (event.target === lightbox) closeLightbox();
+        });
+        document.addEventListener("keydown", function (event) {
+          if (event.key === "Escape") closeLightbox();
+        });
+      })();
+    </script>
   </body>
 </html>

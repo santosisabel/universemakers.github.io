@@ -2942,7 +2942,13 @@ button:disabled,
 }
 
 .lss-image-panel {
-  flex: 0 0 45%;
+  flex: 0 0 55%;
+}
+
+.lss-lightbox-trigger {
+  border-bottom: 0;
+  cursor: zoom-in;
+  display: block;
 }
 
 .lss-image-panel img {
@@ -2954,6 +2960,47 @@ button:disabled,
   font-size: 0.8em;
   font-style: italic;
   margin: 0.75em 0 0 0;
+}
+
+.lss-lightbox {
+  align-items: center;
+  background: rgba(0, 0, 0, 0.9);
+  display: none;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  padding: 3em;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10001;
+}
+
+.lss-lightbox[aria-hidden="false"] {
+  display: flex;
+}
+
+.lss-lightbox img {
+  max-height: 92vh;
+  max-width: 92vw;
+}
+
+.lss-lightbox-close {
+  background: transparent;
+  box-shadow: none;
+  color: #ffffff;
+  font-size: 2.5em;
+  height: auto;
+  line-height: 1;
+  padding: 0;
+  position: absolute;
+  right: 0.75em;
+  top: 0.5em;
+}
+
+.lss-lightbox-close:hover {
+  background: transparent;
+  color: #ffffff !important;
 }
 
 @media screen and (max-width: 1280px) {
